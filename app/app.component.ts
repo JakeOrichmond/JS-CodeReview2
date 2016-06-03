@@ -1,31 +1,39 @@
 import { Component, EventEmitter } from 'angular2/core';
-import { TaskListComponent } from './task-list.component';
-import { Task } from './task.model';
+import { MealListComponent } from './meal-list.component';
+import { Meal } from './meal.model';
 
 @Component({
   selector: 'my-app',
-  directives: [TaskListComponent],
+  directives: [MealListComponent],
   template: `
-    <div class="container">
-      <h1>To-Do List</h1>
-      <task-list
-        [taskList]="tasks"
-        (onTaskSelect)="taskWasSelected($event)">
-      </task-list>
+    <div class="jumbotron">
+      <h1>GrubHub</h1>
     </div>
+    <div class="container">
+      <div class="well">
+      <meal-list [mealList]="meals"
+      (onMealSelect)="mealWasSelected($event)">
+      </meal-list>
   `
 })
+
 export class AppComponent {
-  public tasks: Task[];
+  public meals: Meal[];
+  public meal: Meal;
   constructor(){
-    this.tasks = [
-      new Task("Create To-Do List app.", 0),
-      new Task("Learn Kung Fu.", 1),
-      new Task("Rewatch all the Lord of the Rings movies.", 2),
-      new Task("Do the laundry.", 3)
+    this.meals = [
+      new Meal("Greek Yogurt", "Vanilla Flavor", 150, "Breakfast"),
+      new Meal("White Mocha", "16oz", 200, "Drink"),
+      new Meal("String Cheese", "Ate two", 160, "Snack"),
+      new Meal("Steak Burrito", "From Baja Fresh", 508, "Lunch"),
+      new Meal("Chicken Caesar Salad", "with dressing", 390, "Lunch"),
+      new Meal("Apple", "Fuji, medium", 82, "Snack"),
+      new Meal("Chicken Carbonara", "ate half", 780, "Dinner"),
+      new Meal("Breadsticks", "had 10", 1000, "Dinner"),
+      new Meal("Beer", "1 pint Hef", 280, "Drink")
     ];
   }
-  taskWasSelected(clickedTask: Task): void {
-    console.log('parent', clickedTask);
+  mealWasSelected(clickedMeal: Meal): void {
+  console.log(clickedMeal);
   }
 }

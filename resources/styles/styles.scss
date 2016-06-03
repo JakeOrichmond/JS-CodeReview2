@@ -1,0 +1,44 @@
+body {
+  background-color: #000;
+  color: #fff;
+}
+.well {
+  background-color:#004c00;
+  }
+
+.jumbotron {
+  background-color: gray;
+  color: #fff;
+  padding: 25px;
+}
+
+.btn {
+  margin-top: 10px;
+  background-color: #000;
+  color: #fff;
+}
+
+input,
+option,
+select,
+h3 {
+  color: #fff;
+  margin-left: 20px;
+  margin-top: 10px;
+  padding-top: 10px;
+  font-size: 30px;
+}
+
+.meal-list {
+  margin-top: 120px;
+  margin-left: 50px;
+}
+
+select.mealTimeDropdown.form-control {
+  margin-bottom: 50px;
+  font-size: 100%;
+}
+
+label {
+  margin-top: 10px;
+}

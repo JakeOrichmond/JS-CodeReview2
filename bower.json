@@ -3,7 +3,8 @@
   "description": "",
   "main": "",
   "license": "ISC",
-  "homepage": "",
+  "moduleType": [],
+  "homepage": "https://github.com/JakeOrichmond/JS-CodeReview2.git",
   "ignore": [
     "**/.*",
     "node_modules",
@@ -13,5 +14,8 @@
   ],
   "dependencies": {
     "bootstrap": "^3.3.6"
-  }
+  },
+  "authors": [
+    "jr <jakeorichmond@gmail.com>"
+  ]
 }

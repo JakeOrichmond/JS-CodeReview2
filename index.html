@@ -1,17 +1,15 @@
 <html>
   <head>
-    <title>Start</title>
+    <title>GrubHub</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="build/js/vendor.min.js"></script>
     <link rel="stylesheet" href="build/css/vendor.css">
-    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
-
 
     <!-- 1. Load libraries -->
     <!-- IE required polyfills, in this exact order -->
     <script src="node_modules/systemjs/dist/system-polyfills.js"></script>
-    <script src="node_modules/es6-shim/es6-shim.min.js"></script>
     <script src="node_modules/angular2/es6/dev/src/testing/shims_for_IE.js"></script>
+    <script src="node_modules/es6-shim/es6-shim.min.js"></script>
 
     <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
     <script src="node_modules/systemjs/dist/system.src.js"></script>
@@ -19,14 +17,12 @@
     <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
 
     <link rel="stylesheet" href="build/css/styles.css">
-
   </head>
 
   <!-- 3. Display the application -->
-  <body class ="container">
+  <body>
     <my-app>Loading...</my-app>
   </body>
-  </html>
   <!-- 2. Configure SystemJS -->
   <script>
     System.config({
@@ -40,3 +36,4 @@
     System.import('app/main')
           .then(null, console.error.bind(console));
   </script>
+</html>
